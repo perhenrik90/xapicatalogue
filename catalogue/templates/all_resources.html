@@ -1,8 +1,18 @@
+{% extends "default.html" %}
 {% load i18n %}
 {% load staticfiles %}
 {% load url from future %}
 
+
 {% block content %}
 <h1>HEllo World</h1>
+<p>Du er koblet på {{lrs.local_name}} basen!</p>
+
+{% for resource in resources %}
+<p><a target="_blank" href="{{resource.tcurl}}">{{resource.name}}</a></p>
+<br/>
+
+{% endfor %}
+
 {% endblock %}
 
