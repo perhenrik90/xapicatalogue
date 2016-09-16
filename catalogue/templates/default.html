@@ -4,12 +4,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
   </head>
   <body>
+
+    <div class="container">
     <p>Du er logget inn som {{username}} {{user.firstname}} {{user.lastname}} : {{user.email}}</p>
+    
     {% block content %}
 
     {% endblock %}
+    </div>
+    <script src="{% static 'js/jquery-1.12.1.js' %}"/>
+    <script src="{% static 'js/bootstrap.js' %}"/>
+
   </body>
+
+  
 </html>

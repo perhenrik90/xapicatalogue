@@ -5,11 +5,16 @@
 
 
 {% block content %}
-<h1>{% blocktrans %}Your courses {% endblocktrans %}</h1>
-<p>Du er koblet på {{lrs.local_name}} basen!</p>
 
+
+<p>{% blocktrans %}Your are connected {% endblocktrans %} {{lrs.local_name}}.</p>
+
+<hr/>
+<h1>{% blocktrans %}Your courses {% endblocktrans %}</h1>
 {% for resource in resources %}
-<p><a target="_blank" href="{{resource.tcurl}}">{{resource.name}}</a></p>
+<div class="row">
+  <a class="btn btn-primary" target="_blank" href="{{resource.tcurl}}">{{resource.name}}</a>
+</div>
 <br/>
 
 {% endfor %}
