@@ -50,7 +50,7 @@ def view_all_resources(request):
         urlparam["auth"] = urllib.quote("Basic "+tchash)
         urlparam["actor"] = urllib.quote(tcactor, safe)
 
-        urlpara = "?tincan=true&"
+        urlpara = "tincan=true&"
         urlpara += "endpoint="+urlparam["endpoint"]
         urlpara += "&auth="+urlparam["auth"]
         urlpara += "&actor="+urlparam["actor"]
